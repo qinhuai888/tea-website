@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#344b38">
+  <meta name="description" content="山间有茗，一叶一山，一茶一味。按种类、产地与年份，发现一盏适合自己的茶。">
+  <title>山间有茗 · 茶叶品藏</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./data/products.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#home" aria-label="山间有茗，返回首页">
+        <span class="brand-mark" aria-hidden="true">茗</span>
+        <span><span class="brand-name">山间有茗</span><span class="brand-en">SHAN JIAN YOU MING</span></span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#collection" data-nav="collection">寻一味好茶</a>
+        <a href="#story" data-nav="story">一盏之间</a>
+        <button class="settings-button" type="button" data-action="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.3 3-.6 2.4-2 .9-2.2-.7-2.2 3.8 1.6 1.8v2.3l-1.6 1.8 2.2 3.8 2.2-.7 2 .9.6 2.4h4.4l.6-2.4 2-.9 2.2.7 2.2-3.8-1.6-1.8v-2.3l1.6-1.8-2.2-3.8-2.2.7-2-.9-.6-2.4z"/><circle cx="11.5" cy="12" r="3"/></svg><span>设置</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="home-view">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span>一叶一山 · 一茶一味</p>
+          <h1 id="hero-title">把山野，<br><span>泡进日常。</span></h1>
+          <p class="hero-description">好茶不必远寻，风味自有来处。<br>从一片叶的故事，遇见属于你的那盏清欢。</p>
+          <a class="button primary hero-button" href="#collection">探寻好茶 <span aria-hidden="true">↗</span></a>
+          <p class="hero-footnote"><span class="tiny-leaf" aria-hidden="true">❧</span> 顺时而饮，慢慢相逢</p>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-frame"><img src="./assets/hero.jpg" alt="晨光里的茶席，一盏清茶与质朴茶器" width="1536" height="1024" fetchpriority="high"><span class="image-side-note">草木有本心 · 茶中见山川</span></div>
+          <span class="hero-seal" aria-hidden="true">一<br>盏<br>清<br>欢</span>
+          <div class="image-caption"><span>A LITTLE TEA, A LITTLE TRANQUILITY.</span><span>茶里，自有天地</span></div>
+        </div>
+      </section>
+
+      <section id="collection" class="collection wrap" aria-labelledby="collection-title">
+        <div class="section-heading">
+          <div><p class="eyebrow small">THE TEA COLLECTION</p><h2 id="collection-title">好茶，值得慢慢挑<span>。</span></h2></div>
+          <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="search-input" type="search" placeholder="寻茶名、产地…" aria-label="搜索茶叶名称或产地" maxlength="80"></label>
+        </div>
+        <div class="collection-toolbar"><div id="category-filters" class="category-filters" role="group" aria-label="按茶叶种类筛选"></div><p id="product-count" class="product-count" aria-live="polite"></p></div>
+        <div id="product-grid" class="product-grid"></div>
+        <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">❧</span><h3>暂未寻到这味茶</h3><p>试试其他关键词，或看看全部茶叶。</p><button class="button secondary" type="button" data-action="clear-filters">查看全部茶叶</button></div>
+        <p class="sample-note">品藏初见 · 内置产品与图片均为展示示例，可在设置中替换。</p>
+      </section>
+
+      <section id="story" class="story-section wrap" aria-labelledby="story-title">
+        <div class="story-art" aria-hidden="true"><svg viewBox="0 0 200 210"><path d="M70 195Q100 115 144 25M99 130Q38 122 39 67Q93 74 99 130M119 87Q106 34 157 13Q171 64 119 87M84 164Q126 158 160 111Q103 102 84 164"/><path d="m99 130-37-39m57-4 25-49m-60 126 55-38"/></svg><span>茶与日常</span></div>
+        <div class="story-copy"><p class="eyebrow small">A MOMENT WITH TEA</p><h2 id="story-title">一片叶的远行，<br>一盏茶的相逢。</h2><p>从山间的晨雾，到杯中的舒展，<br>每一味茶，都有自己的来处与时光。<br>愿你在这里，找到一盏适合当下心情的茶。</p></div>
+        <span class="story-vertical" aria-hidden="true">且将新火试新茶</span>
+      </section>
+    </div>
+
+    <section id="detail-view" class="detail-view wrap" aria-labelledby="detail-title" hidden></section>
+
+    <section id="admin-view" class="admin-view wrap" aria-labelledby="admin-title" hidden>
+      <div class="admin-heading"><div><p class="eyebrow small">COLLECTION STUDIO</p><h1 id="admin-title">茶叶管理</h1><p>整理一片叶的故事，让好茶被看见。</p></div><div class="admin-heading-actions"><a class="button secondary" href="#collection">返回前台</a><button class="text-button" type="button" data-action="logout">退出管理</button></div></div>
+      <div class="storage-notice"><span class="notice-dot"></span><p>当前浏览器本地保存。公开网站更新：导出公开数据，替换仓库的 <code>data/products.js</code> 后部署。</p><button class="text-button" type="button" data-action="export">导出公开数据 ↓</button></div>
+      <div class="admin-layout">
+        <section class="editor-panel" aria-labelledby="editor-title">
+          <div class="panel-heading"><h2 id="editor-title">添加新茶</h2><span id="editor-mode">NEW TEA</span></div>
+          <form id="tea-form">
+            <label class="field">茶叶名称 <span>*</span><input name="name" required maxlength="50" placeholder="例如：西湖龙井"></label>
+            <div class="form-row"><label class="field">产地 <span>*</span><input name="origin" required maxlength="80" placeholder="例如：浙江 · 杭州"></label><label class="field">年份 <span>*</span><input name="year" type="number" required min="1900" max="2100" step="1" placeholder="例如：2026"></label></div>
+            <label class="field">茶叶种类 <span>*</span><input name="category" list="category-options" required maxlength="30" placeholder="选择已有种类，或输入新种类"><datalist id="category-options"></datalist></label>
+            <label class="field">产品简介 <span>*</span><textarea name="description" rows="5" required maxlength="2000" placeholder="写下茶叶的风味、工艺，或它的故事…"></textarea></label>
+            <div class="field">茶叶图片 <span>*</span><label class="upload-zone" id="upload-zone" for="image-input"><img id="image-preview" alt="待保存的茶叶图片预览" hidden><span id="upload-placeholder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 16v4h16v-4"/></svg><strong>点击选择茶叶图片</strong><small>JPG / PNG / WebP · 原图不超过 8 MB</small></span><span class="change-image" id="change-image" hidden>更换图片</span><input id="image-input" name="image" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="image-help"></label><p id="image-help" class="field-help">自动缩至最长边 1200px 并压缩为 Base64；建议每张不超过 400 KB。</p></div>
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+            <div class="form-actions"><button id="save-button" class="button primary" type="submit">保存这款茶 <span aria-hidden="true">↗</span></button><button id="cancel-edit" class="text-button" type="button" data-action="cancel-edit" hidden>取消编辑</button></div>
+          </form>
+        </section>
+        <section class="management-panel" aria-labelledby="management-title"><div class="panel-heading"><h2 id="management-title">在藏茶叶 <span id="admin-count"></span></h2><span id="storage-meter"></span></div><div id="admin-list" class="admin-list"></div><p class="management-help">图片会占用浏览器空间，接近上限时请先导出备份。清除浏览器数据会删除本地修改。</p></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="footer-brand" href="#home">山间有茗 <span>一茶 · 一味 · 一时光</span></a><div><span>© <span id="copyright-year">2026</span> 山间有茗</span><span class="footer-divider">/</span><button class="text-button" type="button" data-action="settings">设置与管理 ↗</button></div></footer>
+
+  <dialog id="login-dialog" class="modal" aria-labelledby="login-title"><button class="modal-close" type="button" data-action="close-login" aria-label="关闭登录">×</button><span class="modal-mark" aria-hidden="true">茗</span><p class="eyebrow small">COLLECTION STUDIO</p><h2 id="login-title">打理你的茶叶品藏</h2><p class="modal-description">输入管理密钥，继续编辑。</p><form id="login-form"><label class="field">管理密钥<input id="admin-key" type="password" inputmode="numeric" autocomplete="current-password" required placeholder="请输入管理密钥" maxlength="100"></label><p id="login-error" class="form-error" role="alert" hidden></p><button class="button primary" type="submit">进入管理 <span aria-hidden="true">↗</span></button></form><p class="modal-footnote">仅管理当前浏览器中的茶叶数据</p></dialog>
+  <dialog id="delete-dialog" class="modal confirm-modal" aria-labelledby="delete-title"><h2 id="delete-title">移除这款茶？</h2><p id="delete-description"></p><p class="field-help">此操作会同时更新本地列表与分类，无法撤销。</p><div class="form-actions"><button class="button secondary" type="button" data-action="cancel-delete">再想一想</button><button class="button danger" type="button" data-action="confirm-delete">确认删除</button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <div id="storage-warning" class="storage-warning" role="alert" hidden></div>
+  <noscript><p class="noscript-message">请开启浏览器 JavaScript，以查看茶叶、筛选分类与管理本地数据。</p></noscript>
+</body>
+</html>
